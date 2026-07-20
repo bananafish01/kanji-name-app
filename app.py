@@ -5,7 +5,8 @@ from openai import OpenAI
 st.title("✨ 英語名から漢字名へ変換するアプリ")
 
 # 2. サイドバーにAPIキーの入力欄を作る
-api_key = st.sidebar.text_input("OpenAI API Keyを入力してください", type="password")
+#api_key = st.sidebar.text_input("OpenAI API Keyを入力してください", type="password")
+api_key = st.secrets["OPENAI_API_KEY"] 
 
 # 3. APIキーが入力されている場合のみ、メインの処理を行う
 if api_key:
